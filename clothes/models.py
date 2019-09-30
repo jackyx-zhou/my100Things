@@ -16,14 +16,16 @@ class Clothing(models.Model):
         ),
         ('Trousers', (
                 ('jeans', 'jeans'),
-                ()
+                ('joggers', 'joggers'),
+                ('other', 'other')
             )
         ),
         ('shorts', 'shorts'),
         ('underwear', 'underwear'),
         ('socks', 'socks'),
         ('accessory', 'accessory'),
-        ('other', )
+        ('other', 'other'),
     ]
-    type = models.CharField(max_length=50)
+    type = models.CharField(max_length=15, choices=CLOTHING_CATEGORIES)
+    colour = models.CharField(max_length=6, blank=True)
     joy = models.BooleanField()

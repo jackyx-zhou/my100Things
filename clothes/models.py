@@ -17,7 +17,7 @@ class Clothing(models.Model):
         ('Trousers', (
                 ('jeans', 'jeans'),
                 ('joggers', 'joggers'),
-                ('other', 'other')
+                ('other','other')
             )
         ),
         ('shorts', 'shorts'),

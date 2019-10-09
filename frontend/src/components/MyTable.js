@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import key from "weak-key";
 import Table from "react-bootstrap/Table"
 
+const headingStyles = {
+  textTransform: "capitalize"
+}
+
 const MyTable = ({ data }) =>
   !data.length ? (
     <p>Nothing to show</p>
@@ -14,13 +18,14 @@ const MyTable = ({ data }) =>
       <Table striped bordered hover>
         <thead>
           <tr>
-            {Object.entries(data[0]).map(el => <th key={key(el)}>{el[0]}</th>)}
+            {Object.entries(data[0]).map(el => <th key={key(el)} style={headingStyles}>{el[0]}</th>)}
           </tr>
         </thead>
         <tbody>
           {data.map(el => (
             <tr key={el.id}>
-              {Object.entries(el).map(el => <td key={key(el)}>{el[1]}</td>)}
+              {Object.entries(el).map(el => <td key={key(el)}>{el[1].toString()}</td>)
+              }
             </tr>
           ))}
         </tbody>

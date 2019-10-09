@@ -11,7 +11,7 @@ class DataProvider extends Component {
       loaded: false,
       placeholder: "Loading..."
     };
-    
+
   componentDidMount() {
     fetch(this.props.endpoint)
       .then(response => {
@@ -24,6 +24,7 @@ class DataProvider extends Component {
   }
   render() {
     const { data, loaded, placeholder } = this.state;
+    console.log(data);
     return loaded ? this.props.render(data) : <p>{placeholder}</p>;
   }
 }

@@ -1,0 +1,33 @@
+[
+  {
+    "model": "clothes.clothing",
+    "pk": 1,
+    "fields": {
+      "type": "t-shirt",
+      "description": "adidas sports",
+      "colour": "325aa8",
+      "joy": true
+    }
+  },
+  {
+    "model": "clothes.clothing",
+    "pk": 2,
+    "fields": {
+      "type": "socks",
+      "description": "white Tommy soccer socks",
+      "colour": "000000",
+      "joy": true
+    }
+  },
+  {
+    "model": "clothes.clothing",
+    "pk": 3,
+    "fields": {
+      "type": "jeans",
+      "description": "blue h&m",
+      "colour": "333399",
+      "joy": false
+    }
+  }
+
+]

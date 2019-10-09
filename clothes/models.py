@@ -8,6 +8,7 @@ class Clothing(models.Model):
     CLOTHING_CATEGORIES = [
         ('Top', (
                 ('shirt', 'shirt'),
+                ('t-shirt', 't-shirt'),
                 ('jacket', 'jacket'),
                 ('hoodie', 'hoodie'),
                 ('jumper', 'jumper'),
@@ -27,5 +28,6 @@ class Clothing(models.Model):
         ('other', 'other'),
     ]
     type = models.CharField(max_length=15, choices=CLOTHING_CATEGORIES)
+    description = models.CharField(max_length=50, blank=True)
     colour = models.CharField(max_length=6, blank=True)
     joy = models.BooleanField()

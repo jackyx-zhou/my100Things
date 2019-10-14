@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Clothing(models.Model):
@@ -27,6 +28,8 @@ class Clothing(models.Model):
         ('accessory', 'accessory'),
         ('other', 'other'),
     ]
+    owner = models.ForeignKey(User, related_name="clothing",
+                              on_delete=models.CASCADE, null=True)
     type = models.CharField(max_length=15, choices=CLOTHING_CATEGORIES)
     description = models.CharField(max_length=50, blank=True)
     colour = models.CharField(max_length=6, blank=True)

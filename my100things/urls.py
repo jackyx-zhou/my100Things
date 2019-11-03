@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('clothes.urls')),
     path('', include('frontend.urls')),
     path('token-auth/', obtain_jwt_token),
+    path('', include('userauth.urls')),
 ]
